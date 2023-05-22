@@ -19,12 +19,18 @@ export const routes = [
   {
     path: "/tasks",
     component: () => import("../pages/TasksPage.vue"),
-    name: "tasks"
+    name: "tasks",
+    meta: {
+      requiresAuth: true
+    }
   },
   {
     path: "/summary",
     component: () => import("../pages/SummaryPage.vue"),
-    name: "summary"
+    name: "summary",
+    meta: {
+      requiresAuth: true
+    }
   },
   { 
     path: '/:pathMatch(.*)*', 
